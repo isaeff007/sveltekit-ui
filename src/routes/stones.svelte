@@ -1,4 +1,5 @@
 <script context="module">
+	// @ts-ignore
 	export async function load({ fetch }) {
 		const res = await fetch(hardstoneUrl, hardstoneHeaders);
 		//const stones = await res.json();

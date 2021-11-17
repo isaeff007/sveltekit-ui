@@ -1,7 +1,8 @@
 <script>
+	import Button, { Label } from '@smui/button';
 	import Todo from '$lib/Todo.svelte';
 	let lastId = 0;
-	const createToDo = (text, done = false) => ({ id: ++lastId, text, done });
+	const createToDo = (text = '', done = false) => ({ id: ++lastId, text, done });
 
 	let todoText = '';
 	let todos = [createToDo('learn Svelte', true), createToDo('build Svelte App', false)];
@@ -18,7 +19,7 @@
 		todos = todos.filter((t) => !t.done);
 	};
 
-	const deleteToDo = (todoId) => (todos = todos.filter((t) => t.id !== todoId));
+	const deleteToDo = (todoId = -1) => (todos = todos.filter((t) => t.id !== todoId));
 
 	function toggleDone(todo) {
 		const { id } = todo;
@@ -33,7 +34,7 @@
 <div class="container">
 	<h2>To Do List</h2>
 	<div>{status}</div>
-	<button on:click={archiveCompleted}>Archive Completed</button>
+	<Button color="secondary" on:click={archiveCompleted}><Label>Archive Completed</Label></Button>
 	<ul>
 		{#each todos as todo}
 			<Todo {todo} on:toggleDone={() => toggleDone(todo)} on:delete={() => deleteToDo(todo.id)} />

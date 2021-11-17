@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Button, { Label } from '@smui/button';
 	import { createEventDispatcher } from 'svelte';
 	import { fade } from 'svelte/transition';
 
@@ -9,7 +10,7 @@
 <li transition:fade class=item-container>
 	<input type="checkbox" checked={todo.done} on:change={() => dispatch('toggleDone')} />
 	<span class={'done-' + todo.done}>{todo.text}</span>
-	<button on:click={() => dispatch('delete')}>Delete</button>
+	<Button on:click={() => dispatch('delete')}><Label>Delete</Label></Button>
 </li>
 
 <style>
@@ -28,5 +29,6 @@
         display: grid;
         grid-template-columns: 1fr 3fr 1fr;
         gap: 1rem;
+		align-items: center;
     }
 </style>
