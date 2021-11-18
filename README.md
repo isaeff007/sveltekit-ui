@@ -49,3 +49,8 @@ https://sveltesociety.dev/
 
 SvelteKit Pokedex project with Tailwind:
 https://github.com/jamesqquick/svelte-kit-pokedex
+
+## Deployment
+
+Vercel:
+https://dev.to/hideckies/deploy-sveltekit-app-with-vercel-28ma
