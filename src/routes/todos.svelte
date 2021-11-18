@@ -50,8 +50,5 @@
 	}
 	ul {
 		list-style: none;
-	}
-	button {
-		min-width: 10rem;
-	}
+	}	
 </style>

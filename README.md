@@ -43,3 +43,9 @@ https://github.com/hperrin/svelte-material-ui
 https://sveltematerialui.com/
 
 https://github.com/hperrin/smui-example-sveltekit
+
+Svelte portal:
+https://sveltesociety.dev/
+
+SvelteKit Pokedex project with Tailwind:
+https://github.com/jamesqquick/svelte-kit-pokedex

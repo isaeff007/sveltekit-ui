@@ -4,7 +4,7 @@
 	import { fade } from 'svelte/transition';
 
 	const dispatch = createEventDispatcher();
-	export let todo; //as input parameter for this component
+	export let todo: any; //as input parameter for this component
 </script>
 
 <li transition:fade class=item-container>

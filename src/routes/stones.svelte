@@ -41,24 +41,34 @@
 	};
 </script>
 
-<div class="info">
-	<Select bind:value={selectedType}>
-		{#each types as type}
-			<Option value={type}>
-				{type}
-			</Option>
-		{/each}
-	</Select>
-	<p>{info}</p>
-</div>
+<main class="container">
+	<div class="info">
+		<Select bind:value={selectedType}>
+			{#each types as type}
+				<Option value={type}>
+					{type}
+				</Option>
+			{/each}
+		</Select>
+		<p>{info}</p>
+	</div>
 
-<ul class="card-container">
-	{#each stonesFiltered as stone}
-		<Stone {stone} />
-	{/each}
-</ul>
+	<ul class="card-container">
+		{#each stonesFiltered as stone}
+			<Stone {stone} />
+		{/each}
+	</ul>
+</main>
 
 <style>
+	.container {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		padding: 2rem;
+		align-items: center;
+	}
+
 	.card-container {
 		display: flex;
 		gap: 2rem;
